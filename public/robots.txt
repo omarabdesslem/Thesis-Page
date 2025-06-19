@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /*?utm_
+Allow: /
+
+Sitemap: https://energy-forecast.netlify.app/sitemap.xml
+
