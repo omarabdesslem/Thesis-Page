@@ -64,7 +64,7 @@
         "color": "red"
       },
       "mode": "lines+markers",
-      "name": "SARIMAX Forecast (8w Rolling)",
+      "name": "Seasonal Autoregressive Integrated Moving Average with eXogenous variables Forecast (8w Horizon)",
       "x": [
         "2024-05-20T00:00:00",
         "2024-05-27T00:00:00",
@@ -910,7 +910,7 @@
       "y": 1
     },
     "title": {
-      "text": "SARIMAX(1,0,0)(1,0,0,52) + Weekly Temp | 8-Week Rolling Forecast"
+      "text": "SARIMAX(1,0,0)(1,0,0,52) + Weekly Temp | 8-Week Horizon"
     },
     "xaxis": {
       "title": {
