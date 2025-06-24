@@ -45,7 +45,7 @@ export default function Page(): JSX.Element {
         </div>
       </main>
 
-      {/* PDF Button */}
+      {/* Code Button */}
 <div className="flex flex-wrap justify-center gap-1 sm:gap-2 mt-2 sm:mt-4 mb-4 sm:mb-5 text-sm">
     <a
     href="/I._Overview"

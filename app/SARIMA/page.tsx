@@ -45,17 +45,15 @@ export default function Page(): JSX.Element {
         </div>
       </main>
 
-      {/* PDF Button */}
-      <div className="flex flex-wrap justify-center gap-1 sm:gap-2 mt-2 sm:mt-4 mb-4 sm:mb-5 text-sm">
+      {/* Code Button */}
+<div className="flex flex-wrap justify-center gap-1 sm:gap-2 mt-2 sm:mt-4 mb-4 sm:mb-5 text-sm">
     <a
-    href="/presentation.pdf"
-    target="_blank"
+    href="/I._Overview"
     rel="noopener noreferrer"
     className="bg-gray-800 hover:bg-gray-700 py-1 px-2 sm:py-1.5 sm:px-3 rounded"
   >
-    Presentation
+    Code
   </a>
-  
   <a
     href="/Bachelor_project.pdf"
     target="_blank"
