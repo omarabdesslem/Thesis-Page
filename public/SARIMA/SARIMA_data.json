@@ -910,7 +910,7 @@
       "y": 1
     },
     "title": {
-      "text": "Seasonal Autoregressive Integrated Moving Average(1,0,0), (1,0,0)[52]-52-week seasonality, 8-week horizon)"
+      "text": "Seasonal Autoregressive Integrated Moving Average(1,0,0), (1,0,0)[52]) 52-week seasonality, 8-week horizon)"
     },
     "xaxis": {
       "title": {
