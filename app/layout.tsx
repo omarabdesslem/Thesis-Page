@@ -51,9 +51,7 @@ export default function RootLayout({
               "@type": "TechArticle",
               author: {
                 "@type": "Person",
-                name: "Omar Abdesslem",
-                url: "https://omar-abdesslem.ch",
-              },
+                name: "Omar Abdesslem",              },
               headline: "Swiss Power Grid Load Forecasting Using ARIMA",
               description:
                 "This site presents weekly energy consumption forecasts in Switzerland using ARIMA models, developed as part of Omar Abdesslem's Bachelor thesis.",
