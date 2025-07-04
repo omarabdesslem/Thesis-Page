@@ -32,17 +32,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* Info for indexing
       <head>
-        {/* Canonical URL for search engines */}
         <link rel="canonical" href="https://energy-forecast.netlify.app" />
 
-        {/* Google Site Verification */}
         <meta
           name="google-site-verification"
           content="0Zy0ouZoCDzgwzeUcnZ5mdCxAOHJJWI8AjLvMedC"
         />
 
-        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -65,6 +63,11 @@ export default function RootLayout({
           }}
         />
       </head>
+       */}
+      <head>
+        <meta name="robots" content="noindex, nofollow" />
+      </head>
+
       <body className={inter.className}>{children}</body>
     </html>
   );
