@@ -2,5 +2,5 @@ User-agent: *
 Disallow: /*?utm_
 Allow: /
 
-Sitemap: https://energy-forecast.netlify.app/sitemap.xml
+Sitemap: https://energy-forecasts.netlify.app/sitemap.xml
 
