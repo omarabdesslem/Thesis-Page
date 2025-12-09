@@ -8,15 +8,15 @@ export const metadata: Metadata = {
   title: "Power Grid Load Forecasting - Omar Abdesslem",
   description:
     "Weekly ARIMA forecasts of Swiss energy consumption based on Omar Abdesslem's 2025 Bachelor thesis.",
-  metadataBase: new URL("https://energy-forecast.netlify.app"),
+  metadataBase: new URL("https://energy-forecasts.netlify.app"),
   alternates: {
-    canonical: "https://energy-forecast.netlify.app",
+    canonical: "https://energy-forecasts.netlify.app",
   },
   openGraph: {
     title: "Swiss Power Grid Load Forecasting - Omar Abdesslem",
     description:
       "Interactive forecast visualizations based on Omar Abdesslem's 2025 Bachelor thesis.",
-    url: "https://energy-forecast.netlify.app",
+    url: "https://energy-forecasts.netlify.app",
     siteName: "Energy Forecasting by Omar Abdesslem",
     type: "website",
   },
@@ -24,7 +24,6 @@ export const metadata: Metadata = {
     "google-site-verification": "0Zy0ouZoCDzgwzeUcnZ5mdCxAOHJJWI8AjLvMedC",
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,12 +33,9 @@ export default function RootLayout({
     <html lang="en">
       {/* Info for indexing
       <head>
-        <link rel="canonical" href="https://energy-forecast.netlify.app" />
+        <link rel="canonical" href="https://energy-forecasts.netlify.app" />
 
-        <meta
-          name="google-site-verification"
-          content="0Zy0ouZoCDzgwzeUcnZ5mdCxAOHJJWI8AjLvMedC"
-        />
+        <meta/>
 
         <script
           type="application/ld+json"
@@ -53,10 +49,10 @@ export default function RootLayout({
               headline: "Swiss Power Grid Load Forecasting Using ARIMA",
               description:
                 "This site presents weekly energy consumption forecasts in Switzerland using ARIMA models, developed as part of Omar Abdesslem's Bachelor thesis.",
-              url: "https://energy-forecast.netlify.app/",
+              url: "https://energy-forecasts.netlify.app/",
               mainEntityOfPage: {
                 "@type": "WebPage",
-                "@id": "https://energy-forecast.netlify.app/",
+                "@id": "https://energy-forecasts.netlify.app/",
               },
               datePublished: "2025-06-01",
             }),
