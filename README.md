@@ -5,11 +5,11 @@ This is a web visualization of my 2025 Bachelor thesis:
 
 It presents an interactive, rolling forecast of weekly Swiss energy consumption using statistical time series models—ARIMA, SARIMA, and SARIMAX—with a focus on seasonality and weather effects.
 
-## Overview 📑
+## Overview 
 
 The tool is based on historical data from Swissgrid and weather forecasts from ECMWF. It uses an 8-week horizon and updates weekly. Among all models tested, **SARIMAX with temperature as an exogenous variable** achieved the best forecasting accuracy with a **MAPE of 4.83%**, outperforming AR(1), ARMA, ARIMA, and SARIMA.
 
-## Features 🥨
+## Features 
 
 - Medium-range (8-week) energy load forecasting
 - SARIMAX(1,0,0)(1,0,0,52) model with ECMWF temperature integration
@@ -18,7 +18,7 @@ The tool is based on historical data from Swissgrid and weather forecasts from E
 - Interactive Plotly.js visualizations of forecast vs. actuals
 - Built with Next.js and styled using Tailwind CSS
 
-## Tech Stack 📦
+## Tech Stack 
 
 - **Next.js** — frontend framework  
 - **Tailwind CSS** — responsive styling  
