@@ -1,5 +1,4 @@
 import fs from "fs";
-import Image from "next/image";
 import path from "path";
 
 // Server Component
@@ -39,17 +38,6 @@ export default function OverviewPage() {
           <div className="min-w-[36px] lg:min-w-[180px]" />
         </div>
       </nav>
-
-      <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-3">Monthly Energy Consumption Overview</h2>
-        <Image
-          src="/Overview/Total_by_month.png"
-          alt="Monthly total energy consumption in Switzerland"
-          width={1389}
-          height={590}
-          className="w-full max-w-5xl rounded border border-gray-300 bg-white"
-        />
-      </section>
 
       {/* HTML Content */}
       <div dangerouslySetInnerHTML={{ __html: htmlContent }} />

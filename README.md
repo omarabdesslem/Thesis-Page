@@ -9,7 +9,9 @@ It presents interactive, rolling forecasts of weekly Swiss energy consumption us
 
 The tool is based on historical data from Swissgrid and weather forecasts from ECMWF. It uses a rolling 8-week-ahead forecasting setup and compares classical time-series models against machine learning models trained on lagged consumption, rolling statistics, calendar seasonality, and temperature.
 
-The overview page also includes a monthly energy consumption figure to show the seasonal structure of the data before the forecasting models are introduced.
+The monthly energy consumption figure below shows the seasonal structure of the data before the forecasting models are introduced.
+
+![Monthly total energy consumption in Switzerland](public/Overview/Total_by_month.png)
 
 ## Features 
 
