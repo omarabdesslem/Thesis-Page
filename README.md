@@ -3,19 +3,24 @@
 This is a web visualization of my 2025 Bachelor thesis:  
 **Power Grid Load Forecasting using Machine Learning Approaches**
 
-It presents an interactive, rolling forecast of weekly Swiss energy consumption using statistical time series models—ARIMA, SARIMA, and SARIMAX—with a focus on seasonality and weather effects.
+It presents interactive, rolling forecasts of weekly Swiss energy consumption using statistical time series models and supervised machine learning models, with a focus on seasonality, weather effects, and medium-range load forecasting.
 
 ## Overview 
 
-The tool is based on historical data from Swissgrid and weather forecasts from ECMWF. It uses an 8-week horizon and updates weekly. Among all models tested, **SARIMAX with temperature as an exogenous variable** achieved the best forecasting accuracy with a **MAPE of 4.83%**, outperforming AR(1), ARMA, ARIMA, and SARIMA.
+The tool is based on historical data from Swissgrid and weather forecasts from ECMWF. It uses a rolling 8-week-ahead forecasting setup and compares classical time-series models against machine learning models trained on lagged consumption, rolling statistics, calendar seasonality, and temperature.
+
+The overview page also includes a monthly energy consumption figure to show the seasonal structure of the data before the forecasting models are introduced.
 
 ## Features 
 
 - Medium-range (8-week) energy load forecasting
+- Seasonal naive baseline, AR, ARIMA, SARIMA, and SARIMAX models
+- Ridge Regression, Random Forest, and XGBoost models using supervised lag features
 - SARIMAX(1,0,0)(1,0,0,52) model with ECMWF temperature integration
 - Rolling forecast retrained weekly on 2 years of past data
 - Clean residual diagnostics confirmed via KS tests and periodograms
 - Interactive Plotly.js visualizations of forecast vs. actuals
+- Monthly energy consumption overview figure
 - Built with Next.js and styled using Tailwind CSS
 
 ## Tech Stack 
