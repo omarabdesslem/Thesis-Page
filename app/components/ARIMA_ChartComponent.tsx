@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
+import { themedData, themedLayout } from './chartTheme';
 
 // Dynamically import Plotly without SSR
 const Plot = dynamic(() => import('react-plotly.js'), { ssr: false });
@@ -35,8 +36,8 @@ const ChartComponent = () => {
     <div className="relative flex flex-col w-full min-h-[40vh] justify-center items-center">
       {figure && (
         <Plot
-          data={figure.data}
-          layout={figure.layout}
+          data={themedData(figure.data, '#f59e0b')}
+          layout={themedLayout(figure.layout)}
           config={{ responsive: true }}
           style={{ width: '100%', height: '100%' }}
           useResizeHandler

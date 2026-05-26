@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import React from 'react';
+import ModelNavigation from '../../components/ModelNavigation';
 
 const ChartComponent = dynamic(() => import('../../components/SARIMAX_ChartComponent'), {
   ssr: false,
@@ -22,16 +23,7 @@ export default function Page(): JSX.Element {
           </p>
         </div>
 
-        {/* Model Navigation */}
-        <nav className="text-sm mb-2 sm:mb-3 md:mb-4">
-          <ul className="flex flex-wrap justify-center space-x-4">
-            <li><a href="/Model_Pages/AR" className="text-blue-900 hover:underline">AR</a></li>
-            <li><a href="/Model_Pages/ARMA" className="text-blue-900 hover:underline">ARMA</a></li>
-            <li><a href="/Model_Pages/ARIMA" className="text-blue-900 hover:underline">ARIMA</a></li>
-            <li><a href="/Model_Pages/SARIMA" className="text-blue-900 hover:underline">SARIMA</a></li>
-            <li><a href="/Model_Pages/SARIMAX" className="text-orange-900 hover:underline">SARIMAX</a></li>
-          </ul>
-        </nav>
+        <ModelNavigation activeModel="SARIMAX" />
 
         {/* Chart */}
         <div className="w-full flex justify-center">
@@ -56,7 +48,7 @@ export default function Page(): JSX.Element {
   
   
   <a
-    href="/Bachelor_project.pdf"
+    href="/Bachelor_Project.pdf"
     target="_blank"
     rel="noopener noreferrer"
     className="bg-gray-800 hover:bg-gray-700 py-1 px-2 sm:py-1.5 sm:px-3 rounded"
