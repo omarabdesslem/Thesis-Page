@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { themedData, themedLayout } from './chartTheme';
 
-// Dynamically import Plotly without SSR
 const Plot = dynamic(() => import('react-plotly.js'), { ssr: false });
 
 const ChartComponent = () => {
@@ -14,14 +13,12 @@ const ChartComponent = () => {
   const [mapeReady, setMapeReady] = useState(false);
 
   useEffect(() => {
-    // Fetch chart data
-    fetch('/AR/AR_data.json')
+    fetch('/RandomForest/RandomForest_data.json')
       .then((res) => res.ok ? res.json() : Promise.reject('Chart fetch failed'))
       .then((data) => setFigure(data))
       .catch((err) => console.error('Error loading chart:', err));
 
-    // Fetch MAPE
-    fetch('/AR/ar_mape.txt')
+    fetch('/RandomForest/random_forest_mape.txt')
       .then((res) => res.ok ? res.text() : Promise.reject('MAPE fetch failed'))
       .then((text) => {
         setMape(text.trim());
@@ -36,7 +33,7 @@ const ChartComponent = () => {
     <div className="relative flex flex-col w-full min-h-[40vh] justify-center items-center">
       {figure && (
         <Plot
-          data={themedData(figure.data, '#22c55e')}
+          data={themedData(figure.data, '#f43f5e')}
           layout={themedLayout(figure.layout)}
           config={{ responsive: true }}
           style={{ width: '100%', height: '100%' }}
@@ -46,7 +43,6 @@ const ChartComponent = () => {
         />
       )}
 
-      {/* Loading overlay */}
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center bg-[#1f1f1f] bg-opacity-80 z-10">
           <div className="text-sm text-gray-400 whitespace-nowrap">
@@ -55,7 +51,6 @@ const ChartComponent = () => {
         </div>
       )}
 
-      {/* MAPE badge */}
       {!loading && mape && (
         <div className="absolute bottom-2 left-2 text-[11px] text-gray-300 bg-black bg-opacity-50 px-2 py-1 rounded pointer-events-none">
           <strong>MAPE:</strong> <span className="text-white">{mape}</span>

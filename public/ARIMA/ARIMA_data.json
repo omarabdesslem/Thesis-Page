@@ -2,7 +2,7 @@
   "data": [
     {
       "line": {
-        "color": "blue"
+        "color": "white"
       },
       "mode": "lines+markers",
       "name": "Actual Weekly",
